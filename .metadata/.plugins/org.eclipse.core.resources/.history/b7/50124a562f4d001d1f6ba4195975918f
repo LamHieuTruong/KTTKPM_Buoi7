@@ -1,0 +1,13 @@
+package com.se.th07;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class Th07Application {
+
+	public static void main(String[] args) {
+		SpringApplication.run(Th07Application.class, args);
+	}
+
+}

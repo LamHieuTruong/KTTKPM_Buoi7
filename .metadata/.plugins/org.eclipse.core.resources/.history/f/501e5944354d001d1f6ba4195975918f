@@ -1,0 +1,143 @@
+package com.se.chat.entity;
+
+import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBAttribute;
+import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBHashKey;
+import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBTable;
+
+import java.time.LocalDate;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@DynamoDBTable(tableName = "User")
+public class User {
+
+	@DynamoDBHashKey
+	@DynamoDBAttribute
+	private String uid;
+
+	@DynamoDBAttribute
+	private String phoneNumber;
+
+	@DynamoDBAttribute
+	private String password;
+	
+	@DynamoDBAttribute
+	private String firstName;
+	
+	@DynamoDBAttribute
+	private String lastName;
+	
+	@DynamoDBAttribute
+	private String nickName;
+	
+	@DynamoDBAttribute
+	private String email;
+	
+	@DynamoDBAttribute
+	private String gender;
+	
+	@DynamoDBAttribute
+	private String dateOB;
+	
+	@DynamoDBAttribute
+	private String avatar;
+
+	public String getUid() {
+		return uid;
+	}
+
+	public void setUid(String uid) {
+		this.uid = uid;
+	}
+
+	public String getPhoneNumber() {
+		return phoneNumber;
+	}
+
+	public void setPhoneNumber(String phoneNumber) {
+		this.phoneNumber = phoneNumber;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	public String getFirstName() {
+		return firstName;
+	}
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
+	public String getNickName() {
+		return nickName;
+	}
+
+	public void setNickName(String nickName) {
+		this.nickName = nickName;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getGender() {
+		return gender;
+	}
+
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
+
+	public String getDateOB() {
+		return dateOB;
+	}
+
+	public void setDateOB(String dateOB) {
+		this.dateOB = dateOB;
+	}
+
+	public String getAvatar() {
+		return avatar;
+	}
+
+	public void setAvatar(String avatar) {
+		this.avatar = avatar;
+	}
+
+	@Override
+	public String toString() {
+		return "User{" +
+				", firstName='" + firstName + '\'' +
+				", lastName='" + lastName + '\'' +
+				", nickName='" + nickName + '\'' +
+				", phoneNumber='" + phoneNumber + '\'' +
+				", email='" + email + '\'' +
+				", gender='" + gender + '\'' +
+				", dateOB='" + dateOB + '\'' +
+				", avatar='" + avatar + '\'' +
+				'}';
+	}
+}
